@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <title>Women With Vision - Home</title>
-  <style>
-    * {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women With Vision Get - In Touch</title>
+    <style>
+         * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -696,220 +695,272 @@ nav ul li:hover .dropdown-menu {
         display: flex;
         align-items: center;
     }
-  </style>
+        /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+        } */
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+        }
+
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background: #1a252f;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            background: #f8f8f8;
+            border-radius: 10px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 20px;
+            color: #2c3e50;
+        }
+
+        .social-links a:hover {
+            color: #1a252f;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <span>Women With Vision</span>
-        <!-- Hamburger Menu for Mobile -->
-        <span class="hamburger" onclick="toggleNav()">&#9776;</span>
-      </header>
-    <nav>
-        <ul class="breadcrumb">
+    <body>
+        <header>
+            <span>Women With Vision</span>
+            <!-- Hamburger Menu for Mobile -->
+            <span class="hamburger" onclick="toggleNav()">&#9776;</span>
+          </header>
+        <nav>
+            <ul class="breadcrumb">
+              <li><a href="/home.html">Home</a></li>
+              <li class="dropdown">
+                <a href="/about.html" class="dropdown-toggle">About Us</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Our Visionaries</a></li>
+                  <li><a href="#">Our Community</a></li>
+                  <li><a href="#">Our Work</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Donate to Our Programs</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Education</a></li>
+                  <li><a href="#">Hope</a></li>
+                  <li><a href="#">Nourishment</a></li>
+                  <li><a href="#">Wellness</a></li>
+                </ul>
+              </li>
+              <li><a href="/contact.html">Get In Touch</a></li>
+            </ul>
+          </nav>
+    
+          <!-- Side Navigation -->
+      <div id="side-nav" class="side-nav">
+        <span class="close-btn" onclick="toggleNav()">×</span>
+        <ul>
           <li><a href="/home.html">Home</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle">About Us</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Our Visionaries</a></li>
-              <li><a href="#">Our Community</a></li>
-              <li><a href="#">Our Work</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle">Donate to Our Programs</a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Education</a></li>
-              <li><a href="#">Hope</a></li>
-              <li><a href="#">Nourishment</a></li>
-              <li><a href="#">Wellness</a></li>
-            </ul>
-          </li>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="#">Our Visionaries</a></li>
+          <li><a href="#">Our Community</a></li>
+          <li><a href="#">Our Work</a></li>
+          <li><a href="#">Donate to Our Programs</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Hope</a></li>
+          <li><a href="#">Nourishment</a></li>
+          <li><a href="#">Wellness</a></li>
           <li><a href="/contact.html">Get In Touch</a></li>
         </ul>
-      </nav>
+      </div>
 
-      <!-- Side Navigation -->
-  <div id="side-nav" class="side-nav">
-    <span class="close-btn" onclick="toggleNav()">×</span>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Our Visionaries</a></li>
-      <li><a href="#">Our Community</a></li>
-      <li><a href="#">Our Work</a></li>
-      <li><a href="#">Donate to Our Programs</a></li>
-      <li><a href="#">Education</a></li>
-      <li><a href="#">Hope</a></li>
-      <li><a href="#">Nourishment</a></li>
-      <li><a href="#">Wellness</a></li>
-      <li><a href="#">Get In Touch</a></li>
-    </ul>
-  </div>
+      <div class="container">
+        <div class="header">
+            <h1>Get In Touch</h1><br>
+            <p>We’d love to hear from you! Reach out using the form below or contact us directly.</p>
+        </div><br>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Together we can make a difference!</h1>
-      <p>Women With Vision is dedicated to uplifting underserved communities by building partnerships, nurturing children, and inspiring meaningful change.</p>
-      <button>Make a Difference</button>
-    </div>
-  </section>
+        <div class="contact-section">
+            <div class="contact-form">
+                <form>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
 
-  <!-- New Intro Section -->
-  <section class="intro-text">
-    <h2>At Women With Vision, we believe in the transformative power of compassion and action</h2>
-    <p>Across South Africa, our programs in education, nourishment, wellness, and joy uplift underserved communities, creating opportunities for them to thrive.</p>
-    <button class="read-more-btn" onclick="toggleContent()">Read More</button>
-    <div class="expand-content">
-      <p>Join us as we work to break barriers, inspire hope, and build brighter futures. Together, we can make a difference that lasts a lifetime.</p>
-      <h3>What We Do:</h3>
-      <ul>
-        <li>Empower children through Education</li>
-        <li>Feed minds and bodies with Nourishment</li>
-        <li>Promote holistic health through Wellness</li>
-        <li>Spread happiness and hope with Joy</li>
-      </ul>
-    </div>
-  </section>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
 
-  <!-- Active Missions Section -->
-  <section class="active-missions">
-    <h2 class="section-title">Our Active Missions</h2>
-    <div class="mission-cards">
-      <div class="mission-card" style="background-image: url('https://i.ibb.co/pr2V4W7x/IMG-6203.jpg');">
-        <div class="text">
-          <h3>Umtata Papsmear Campaign</h3>
-          <p>To date, we have screened almost 600 ladies, and we remain committed to running educational campaigns to raise awareness about the importance of pap smears for adult women.</p>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Address:</strong> 123 Nonprofit St, City, Country</p>
+                <p><strong>Email:</strong> contact@womenwithvision.org</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#">🔵 Facebook</a>
+                    <a href="#">🐦 Twitter</a>
+                    <a href="#">📷 Instagram</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="mission-card" style="background-image: url('https://i.ibb.co/vv3NJMzv/43bd1d2c-a6ca-4c0d-b50f-438039ea8814.jpg');">
-        <div class="text">
-          <h3>Children’s Christmas Parties</h3>
-          <p>We host Christmas parties for children in underserved communities each year.</p>
-        </div>
-      </div>
-      <div class="mission-card" style="background-image: url('https://i.ibb.co/B5JFcYFQ/IMG-2396.jpg');">
-        <div class="text">
-          <h3>Mandela Day Celebrations</h3>
-          <p>Every year on Mandela Day, July 18th, our WWV branches across the country dedicate their 67 minutes by cooking meals, gifting art supplies, and spending time with the elderly in old age homes.</p>
-        </div>
-      </div>
     </div>
-  </section>  
-
-  <!-- Programs Section -->
-  <section class="programs">
-    <div class="program-text">
-        <h2>Our Programs</h2>
-        <p><strong>Hope:</strong><br>Spreading joy and inspiring futures</p>
-        <p><strong>Education:</strong><br>Empowering minds, building futures</p>
-        <p><strong>Wellness and Nourishment:</strong><br>Empowering minds, building futures</p>
-        <button>Explore Our Programs</button>
-    </div>
-    <div class="program-image">
-        <img src="https://i.ibb.co/vxHbqC15/1127e760-f276-4a90-bc2f-cd109fb2b625.jpg" alt="Our Programs Image">
-    </div>
-</section>
-
-  <!-- Impact Section -->
-  <section class="impact">
-    <h2 class="section-title">Our Impact</h2>
-    <div class="impact-cards">
-      <!-- Testimonial 1 -->
-      <div class="impact-card">
-        <h3>Tammy Thompson</h3>
-        <p><strong>House Mother</strong></p>
-        <p>‘Our kids felt the magic of Christmas for the first time, thanks to WWV.’</p>
-      </div>
-      <!-- Testimonial 2 -->
-      <div class="impact-card">
-        <h3>Nancy Noodle</h3>
-        <p><strong>Local Nurse</strong></p>
-        <p>‘We are truly grateful to the WWV team for the life-changing pap smear campaign they run for the women in our area.’</p>
-      </div>
-      <!-- Testimonial 3 -->
-      <div class="impact-card">
-        <h3>Penny Poker</h3>
-        <p><strong>Local Teacher</strong></p>
-        <p>‘The Polar Park playground has positively impacted the lives of so many of our young ones!’</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-left">
-        <img src="https://i.ibb.co/HLbK2J4c/Women-With-Vision-A6-1.jpg" alt="Women With Vision Logo" class="footer-logo">
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-left">
+            <img src="https://i.ibb.co/HLbK2J4c/Women-With-Vision-A6-1.jpg" alt="Women With Vision Logo" class="footer-logo">
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+      
+          <div class="footer-right">
+            <div class="footer-column">
+              <h3>About Us</h3>
+              <ul>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Our Work</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Our Programs</h3>
+              <ul>
+                <li><a href="#">Hope</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#">Wellness</a></li>
+                <li><a href="#">Nourishment</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Get in Touch</h3>
+              <ul>
+                <li><a href="#">Donate</a></li>
+                <li><a href="#">Join Our Community</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-  
-      <div class="footer-right">
-        <div class="footer-column">
-          <h3>About Us</h3>
-          <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Our Work</a></li>
-          </ul>
+      
+        <div class="footer-bottom">
+          <p>Made by The Three Stars &copy; 2025</p>
         </div>
-        <div class="footer-column">
-          <h3>Our Programs</h3>
-          <ul>
-            <li><a href="#">Hope</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Wellness</a></li>
-            <li><a href="#">Nourishment</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h3>Get in Touch</h3>
-          <ul>
-            <li><a href="#">Donate</a></li>
-            <li><a href="#">Join Our Community</a></li>
-            <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  
-    <div class="footer-bottom">
-      <p>Made by The Three Stars &copy; 2025</p>
-    </div>
-</footer>  
-
-  <script>
-    // Function to toggle side nav
-    function toggleNav() {
-      var sideNav = document.getElementById('side-nav');
-      sideNav.classList.toggle('open');
-    }
-
-    nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % cards.length;
-      track.style.transform = `translateX(-${currentIndex * 320}px)`;
-    });
-
-    prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      track.style.transform = `translateX(-${currentIndex * 320}px)`;
-    });
-
-    function toggleContent() {
-      const content = document.querySelector('.expand-content');
-      const button = document.querySelector('.read-more-btn');
-      if (content.style.display === "none" || content.style.display === "") {
-        content.style.display = "block";
-        button.innerText = "Read Less";
-      } else {
-        content.style.display = "none";
-        button.innerText = "Read More";
-      }
-    }
-  </script>
+    </footer>  
+    
+      <script>
+        // Function to toggle side nav
+        function toggleNav() {
+          var sideNav = document.getElementById('side-nav');
+          sideNav.classList.toggle('open');
+        }
+    
+        nextButton.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % cards.length;
+          track.style.transform = `translateX(-${currentIndex * 320}px)`;
+        });
+    
+        prevButton.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+          track.style.transform = `translateX(-${currentIndex * 320}px)`;
+        });
+    
+        function toggleContent() {
+          const content = document.querySelector('.expand-content');
+          const button = document.querySelector('.read-more-btn');
+          if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+            button.innerText = "Read Less";
+          } else {
+            content.style.display = "none";
+            button.innerText = "Read More";
+          }
+        }
+      </script>
 </body>
 </html>
