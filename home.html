@@ -47,6 +47,48 @@
         font-weight: bold;
     }
 
+    nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li a.dropdown-toggle {
+    color: #2c2c54;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 0;
+  list-style: none;
+  width: 300px;
+  z-index: 10; /* Ensure the dropdown appears above hero section */
+}
+
+nav ul li .dropdown-menu li a {
+    display: block;
+    color: #2c2c54;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+nav ul li .dropdown-menu li a:hover {
+    background-color: #2c2c54;
+    color: white;
+}
+
+/* Display Dropdown on Hover */
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
     /* Breadcrumb Styles */
     .breadcrumb {
         display: flex;
@@ -550,12 +592,27 @@
     <header>Women With Vision</header>
     <nav>
         <ul class="breadcrumb">
-            <li><a href="/home.html">Home</a></li>
-            <li><a href="/about.html">About Us</a></li>
-            <li><a href="#">Donate To Our Programs</a></li>
-            <li><a href="#">Get In Touch</a></li>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">About Us</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Our Visionaries</a></li>
+              <li><a href="#">Our Community</a></li>
+              <li><a href="#">Our Work</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">Donate to Our Programs</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Education</a></li>
+              <li><a href="#">Hope</a></li>
+              <li><a href="#">Nourishment</a></li>
+              <li><a href="#">Wellness</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
 
   <!-- Hero Section -->
   <section class="hero">
