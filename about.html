@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women With Vision</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #2c2c54;
+            text-align: center;
+        }
+        header {
+            background-color: #2c2c54;
+            padding: 20px;
+            color: white;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: #2c2c54;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Breadcrumb Styles */
+        .breadcrumb {
+            display: flex;
+            list-style: none;
+            padding: 12px;
+            background-color: #ffffff;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+        .breadcrumb li + li:before {
+            content: "\203A";
+            padding: 0 10px;
+            color: #2c2c54;
+            font-weight: bold;
+        }
+        .breadcrumb a {
+            color: #2c2c54;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            background: #2c2c54;
+            color: white;
+        }
+        .hero {
+            background: url('logo.png') no-repeat center;
+            background-size: contain;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c2c54;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #2c2c54;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 18px;
+        }
+        .missions {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+        }
+        .mission-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-width: 300px;
+        }
+        .typewriter span {
+            border-right: 2px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+        footer {
+            background-color: #2c2c54;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>Women With Vision</header>
+    <nav>
+        <ul class="breadcrumb">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="#">Donate To Our Programs</a></li>
+            <li><a href="#">Get In Touch</a></li>
+        </ul>
+    </nav>
+    <div class="hero">Empowering Women & Children</div>
+    <div class="typewriter"><span>Breaking cycles of poverty, creating opportunities.</span></div>
+    <a href="#" class="cta-button">Donate Now</a>
+    <h2>Active Missions</h2>
+    <div class="missions">
+        <div class="mission-card">Mandela Day Celebration</div>
+        <div class="mission-card">Papercare Campaign</div>
+        <div class="mission-card">Children’s Christmas Parties</div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Women With Vision. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let typewriter = document.querySelector(".typewriter span");
+            typewriter.style.width = "0";
+            setTimeout(() => typewriter.style.width = "100%", 500);
+        });
+    </script>
+</body>
+</html>
