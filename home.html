@@ -89,6 +89,28 @@ nav ul li:hover .dropdown-menu {
     display: block;
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    nav ul li {
+        margin-right: 0; /* Remove right margin for stacked items */
+    }
+
+    nav ul li .dropdown-menu {
+        display: none; /* Hidden by default on mobile */
+        position: static; /* Make dropdown behave like a regular block on mobile */
+        width: 100%;
+        box-shadow: none; /* Remove box shadow for a cleaner look */
+    }
+
+    /* Show dropdown when active (clicked on mobile) */
+    nav ul li.active .dropdown-menu {
+        display: block;
+    }
+}
+
     /* Breadcrumb Styles */
     .breadcrumb {
         display: flex;
@@ -104,7 +126,7 @@ nav ul li:hover .dropdown-menu {
         font-size: 18px;
     }
     .breadcrumb li + li:before {
-        content: "\203A";
+        /* content: "\203A"; */
         padding: 0 10px;
         color: #2c2c54;
         font-weight: bold;
@@ -610,7 +632,7 @@ nav ul li:hover .dropdown-menu {
               <li><a href="#">Wellness</a></li>
             </ul>
           </li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Get In Touch</a></li>
         </ul>
       </nav>
 
@@ -751,13 +773,26 @@ nav ul li:hover .dropdown-menu {
 </footer>  
 
   <script>
-    // Carousel functionality
-    const track = document.querySelector('.carousel-track');
-    const cards = Array.from(track.children);
-    const nextButton = document.querySelector('.carousel-button.right');
-    const prevButton = document.querySelector('.carousel-button.left');
+    // Select all dropdown items
+const dropdownItems = document.querySelectorAll('.dropdown');
 
-    let currentIndex = 0;
+// Add click event listener for each dropdown item
+dropdownItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+        // Prevent the default link action
+        e.preventDefault();
+
+        // Toggle the active class on the clicked dropdown
+        this.classList.toggle('active');
+    });
+});
+
+// Optionally, close the dropdown if clicked outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.dropdown')) {
+        dropdownItems.forEach(item => item.classList.remove('active'));
+    }
+});
 
     nextButton.addEventListener('click', () => {
       currentIndex = (currentIndex + 1) % cards.length;
