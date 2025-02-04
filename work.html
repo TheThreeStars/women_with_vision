@@ -205,6 +205,64 @@ nav ul li:hover .dropdown-menu {
       }
     }
 
+    .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .metrics {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .metric {
+            background: #5e72a9;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            width: 30%;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .tab {
+            background: #5e72a9;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .tab.active {
+            background: #2c2c54;
+        }
+        .tab-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .project-card {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #5e72a9;
+            text-decoration: none;
+        }
+
   footer {
     background-color: #2c2c54;
     color: white;
@@ -365,6 +423,68 @@ nav ul li:hover .dropdown-menu {
     </ul>
   </div>
 
+  <div class="container">
+    <h1>Our Work</h1>
+    
+    <section class="metrics">
+        <div class="metric">
+            <h2><span id="projectsCount">0</span>+</h2>
+            <p>Projects Completed</p>
+        </div>
+        <div class="metric">
+            <h2><span id="peopleHelped">0</span>+</h2>
+            <p>People Helped</p>
+        </div>
+        <div class="metric">
+            <h2><span id="yearsActive">0</span>+</h2>
+            <p>Years of Service</p>
+        </div>
+    </section>
+    
+    <section class="projects">
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('active')">Active Projects</button>
+            <button class="tab" onclick="showTab('past')">Past Projects</button>
+        </div>
+        
+        <div id="active" class="tab-content">
+            <div class="project-card">
+                <h3>Mandela Day</h3>
+                <p>Annual event dedicated to helping the elderly and cooking meals.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Pap Smear Campaign</h3>
+                <p>Screened almost 600 women for early detection of cervical cancer.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Teen Wellness Program</h3>
+                <p>Providing health check-ups and dignity packs for teenagers.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        
+        <div id="past" class="tab-content" style="display: none;">
+            <div class="project-card">
+                <h3>Cape Town Branch Launch</h3>
+                <p>Expanded impact with the launch of the Cape Town branch.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>COVID-19 Relief</h3>
+                <p>Organized food parcel handouts to support communities during the pandemic.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Polar Park Project</h3>
+                <p>Built a school with ablution facilities and a playground for 35 children.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+</div>
+
   <!-- Footer -->
   <footer>
     <div class="footer-container">
@@ -427,6 +547,14 @@ nav ul li:hover .dropdown-menu {
       currentIndex = (currentIndex - 1 + cards.length) % cards.length;
       track.style.transform = `translateX(-${currentIndex * 320}px)`;
     });
+
+    function showTab(tabName) {
+            document.getElementById('active').style.display = tabName === 'active' ? 'block' : 'none';
+            document.getElementById('past').style.display = tabName === 'past' ? 'block' : 'none';
+            
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`button[onclick="showTab('${tabName}')"]`).classList.add('active');
+        }
   </script>
 </body>
 </html>
