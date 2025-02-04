@@ -16,7 +16,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #5e72a9;
+        /* background-color: #5e72a9; */
         color: #2c2c54;
         text-align: center;
     }
@@ -798,14 +798,17 @@ nav ul li:hover .dropdown-menu {
                 flex-direction: column;
                 text-align: center;
             }
+            .image-container img {
+                width: 90%; 
+                margin: 0;
+
+    }
         }
         .heading{
-          color: #ffffff;
+          /* color: #ffffff; */
           font-weight: 900;
         }
-         p {
-          color: #ffffff;
-        }
+         
         button {
             width: 100%;
             padding: 10px;
@@ -850,6 +853,87 @@ nav ul li:hover .dropdown-menu {
             margin-top: 6%;
             margin-left: 10%;
         }
+        /* Tablets and smaller screens (max-width: 900px) */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .form-container, .image-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input, textarea, select {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .image-container img {
+        width: 90%; 
+        margin: 0;
+
+    }
+    .form-container p{
+      font-size: small;
+    }
+}
+
+/* Very small devices (max-width: 400px) */
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+        margin-left: 4;
+
+    }
+
+    input, textarea, select {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+    
+    .image-container img {
+        width: 80%; /* Further reduces the image size */
+        margin: 0;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    h2{
+      font-size: 19px;
+    }
+    p {
+      font-size: small;
+    }
+    .form-container{
+      margin: 0;
+    }
+    .form-container p{
+      font-size: small;
+    }
+}
 
     </style>
 </head>
@@ -905,8 +989,8 @@ nav ul li:hover .dropdown-menu {
 <p>Reach out, and let's make a difference together</p>
       <div class="container">
         <div class="form-container">
-            <h2>Let's connect to <span class="highlight">inspire hope</span></h2>
-            <p>Join Our Mission: Make a Difference with Women With Vision!</p>
+            <h2>Let's connect to <span class="highlight">inspire hope</span></h2><br>
+            <p>Join Our Mission: Make a Difference with Women With Vision!</p><br>
             <form>
                 <input type="text" placeholder="Last Name" required>
                 <input type="text" placeholder="First Name" required>
