@@ -205,6 +205,145 @@ nav ul li:hover .dropdown-menu {
       }
     }
 
+    /* Hero Section */
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 74vh;
+        padding: 50px 10%;
+        background: linear-gradient(135deg, #5e72a9, #2c2c54);
+        color: white;
+        margin-bottom: 50px;
+    }
+
+    .hero-text {
+        max-width: 60%;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .hero-image img {
+      width: 400px;
+      height: 300px;
+    }
+
+    .cta-button {
+    background-color: white; /* Change background to white */
+    color: #5e72a9; /* Adjust text color to match the design */
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 25px;
+    display: inline-block;
+    border: 2px solid #5e72a9; /* Add a border that matches the text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #5e72a9; /* Background color when hovered */
+    color: white; /* Text color when hovered */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 40px 5%;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        width: 80%;
+        max-width: 350px;
+        margin-top: 20px;
+    }
+}
+
+    /* Key Initiatives Section */
+  .key-initiatives {
+    background-color: #fff;
+    padding: 40px 10%;
+    color: #2c2c54;
+    text-align: center;
+  }
+
+  .content h2 {
+    font-size: 30px;
+    color: #2c2c54;
+    margin-bottom: 30px;
+  }
+
+  .initiatives-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .initiative {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease;
+  }
+
+  .initiative:hover {
+    transform: translateY(-10px);
+  }
+
+  .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #5e72a9;
+  }
+
+  .initiative h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c2c54;
+  }
+
+  .initiative p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .initiatives-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .initiative {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+
   footer {
     background-color: #2c2c54;
     color: white;
@@ -364,6 +503,48 @@ nav ul li:hover .dropdown-menu {
       <li><a href="/contact.html">Get In Touch</a></li>
     </ul>
   </div>
+
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Hope is the light that sustains us during challenges</h1>
+    <p>At Women With Vision, we strive to spark hope in every life we touch. Through our programs, we create joyful moments that inspire resilience and nurture dreams.</p>
+    <a href="/donate.html" class="cta-button">Donate Here</a>
+  </div>
+  <div class="hero-image">
+    <img src="https://i.ibb.co/1fKnBgQ5/IMG-2441.jpg" alt="Inspiring Image" />
+  </div>
+</section>
+
+<!-- Content Section -->
+<section class="key-initiatives">
+  <div class="content">
+      <h2>Our Key Initiatives</h2>
+      <div class="initiatives-container">
+          <div class="initiative">
+              <div class="icon">
+                <i class="fa fa-gift"></i>
+              </div>
+              <h3>End-of-Year School Parties</h3>
+              <p>Since 2009, we’ve hosted annual celebrations for children in Mthatha, providing them with gifts, school supplies, and moments of joy to end the year on a high note. This initiative was started in East London and Cape Town as well, and has been running since 2020.</p>
+          </div>
+          <div class="initiative">
+              <div class="icon">
+                <i class="fa fa-hands-helping"></i>
+              </div>
+              <h3>Mandela Day Celebrations</h3>
+              <p>Every July 18, we dedicate 67 minutes to honor Nelson Mandela’s legacy by cooking meals, collecting art supplies, and spending time with the elderly at old age homes. These small acts of kindness bring smiles and comfort to vulnerable members of our communities.</p>
+          </div>
+          <div class="initiative">
+              <div class="icon">
+                <i class="fa fa-play-circle"></i>
+              </div>
+              <h3>Polar Park Playground (2015)</h3>
+              <p>In Polar Park, Mthatha, we built a School and a safe playground and ablution facilities for 35 children. This project provided a space for play, laughter, and the creation of cherished childhood memories.</p>
+          </div>
+      </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer>
