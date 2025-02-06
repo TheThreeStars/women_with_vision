@@ -264,7 +264,7 @@ nav ul li:hover .dropdown-menu {
             text-decoration: none;
         }
 
-  footer {
+        footer {
     background-color: #2c2c54;
     color: white;
     padding: 40px 10%;
@@ -429,61 +429,91 @@ nav ul li:hover .dropdown-menu {
     
     <section class="metrics">
         <div class="metric">
-            <h2><span id="projectsCount">0</span>+</h2>
+            <h2><span id="projectsCount">14</span></h2>
             <p>Projects Completed</p>
         </div>
         <div class="metric">
-            <h2><span id="peopleHelped">0</span>+</h2>
+            <h2><span id="peopleHelped">10 000</span>+</h2>
             <p>People Helped</p>
         </div>
         <div class="metric">
-            <h2><span id="yearsActive">0</span>+</h2>
+            <h2><span id="yearsActive">18</span></h2>
             <p>Years of Service</p>
         </div>
     </section>
     
     <section class="projects">
-        <div class="tabs">
-            <button class="tab active" onclick="showTab('active')">Active Projects</button>
-            <button class="tab" onclick="showTab('past')">Past Projects</button>
-        </div>
-        
-        <div id="active" class="tab-content">
-            <div class="project-card">
-                <h3>Mandela Day</h3>
-                <p>Annual event dedicated to helping the elderly and cooking meals.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="project-card">
-                <h3>Pap Smear Campaign</h3>
-                <p>Screened almost 600 women for early detection of cervical cancer.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="project-card">
-                <h3>Teen Wellness Program</h3>
-                <p>Providing health check-ups and dignity packs for teenagers.</p>
-                <a href="#">Learn More</a>
-            </div>
-        </div>
-        
-        <div id="past" class="tab-content" style="display: none;">
-            <div class="project-card">
-                <h3>Cape Town Branch Launch</h3>
-                <p>Expanded impact with the launch of the Cape Town branch.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="project-card">
-                <h3>COVID-19 Relief</h3>
-                <p>Organized food parcel handouts to support communities during the pandemic.</p>
-                <a href="#">Learn More</a>
-            </div>
-            <div class="project-card">
-                <h3>Polar Park Project</h3>
-                <p>Built a school with ablution facilities and a playground for 35 children.</p>
-                <a href="#">Learn More</a>
-            </div>
-        </div>
-    </section>
+      <div class="tabs">
+          <button class="tab active" onclick="showTab('active')">Active Projects</button>
+          <button class="tab" onclick="showTab('past')">Past Projects</button>
+      </div>
+      
+      <div id="active" class="tab-content">
+          <div class="project-card">
+              <h3>Back to School Stationery Drive</h3>
+              <p>Providing essential school supplies to children in need.</p>
+          </div>
+          <div class="project-card">
+              <h3>Food Parcels +1000</h3>
+              <p>Distributing food parcels to support over 1000 families.</p>
+          </div>
+          <div class="project-card">
+              <h3>Soup Kitchen</h3>
+              <p>Serving hot meals to those in need.</p>
+          </div>
+          <div class="project-card">
+              <h3>Annual Bursaries Budget of R20k</h3>
+              <p>Providing financial aid to students in need.</p>
+          </div>
+          <div class="project-card">
+              <h3>Quarterly Pap Smear</h3>
+              <p>Promoting early detection of cervical cancer.</p>
+          </div>
+          <div class="project-card">
+              <h3>Annual 67 Minutes at an Old Age Home</h3>
+              <p>Spending time and providing care for the elderly.</p>
+          </div>
+          <div class="project-card">
+              <h3>Annual Christmas Party</h3>
+              <p>Bringing festive joy to underprivileged communities.</p>
+          </div>
+          <div class="project-card">
+              <h3>Annual Blanket Drive</h3>
+              <p>Distributing blankets to those in need during winter.</p>
+          </div>
+          <div class="project-card">
+              <h3>Sanitary Pads Drive</h3>
+              <p>Providing sanitary products to underprivileged girls.</p>
+          </div>
+      </div>
+      
+      <div id="past" class="tab-content" style="display: none;">
+          <div class="project-card">
+              <h3>Wellness Programme for Children</h3>
+              <p>Supporting children's health and well-being.</p>
+          </div>
+          <div class="project-card">
+              <h3>Building of a Complete Creche in Mthatha</h3>
+              <p>Constructed a full-fledged creche for early childhood development.</p>
+          </div>
+          <div class="project-card">
+              <h3>Renovations to Xala School, Mount Zion, and Eluxolweni Children's Home</h3>
+              <p>Assisting in school and home renovations for better living conditions.</p>
+          </div>
+          <div class="project-card">
+              <h3>Built and Furnished Additional Dormitories at Happy Homes</h3>
+              <p>Providing accommodation for disabled individuals in Mthatha.</p>
+          </div>
+          <div class="project-card">
+              <h3>Replacing Windows and Renovations at Siyakhana Children's Home</h3>
+              <p>Improving facilities for children in need.</p>
+          </div>
+          <div class="project-card">
+              <h3>Wheelchair and Onboarding for a Child with Cerebral Palsy</h3>
+              <p>Providing mobility and support for a child in need.</p>
+          </div>
+      </div>
+  </section>
 </div>
 
   <!-- Footer -->
@@ -503,25 +533,25 @@ nav ul li:hover .dropdown-menu {
         <div class="footer-column">
           <h3>About Us</h3>
           <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Our Work</a></li>
+            <li><a href="/about.html">Our Story</a></li>
+            <li><a href="/work.html">Our Work</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Our Programs</h3>
           <ul>
-            <li><a href="#">Hope</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Wellness</a></li>
-            <li><a href="#">Nourishment</a></li>
+            <li><a href="/hope.html">Hope</a></li>
+            <li><a href="/education.html">Education</a></li>
+            <li><a href="/wellness.html">Wellness</a></li>
+            <li><a href="/nourishment.html">Nourishment</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Get in Touch</h3>
           <ul>
-            <li><a href="#">Donate</a></li>
-            <li><a href="#">Join Our Community</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="/programs.html">Donate</a></li>
+            <li><a href="/community.html">Join Our Community</a></li>
+            <li><a href="/contact.html">Get in Touch</a></li>
           </ul>
         </div>
       </div>
@@ -530,7 +560,7 @@ nav ul li:hover .dropdown-menu {
     <div class="footer-bottom">
       <p>Made by The Three Stars &copy; 2025</p>
     </div>
-</footer>  
+</footer>
 
   <script>
     // Function to toggle side nav
@@ -538,6 +568,36 @@ nav ul li:hover .dropdown-menu {
       var sideNav = document.getElementById('side-nav');
       sideNav.classList.toggle('open');
     }
+
+    function countUp(elementId, endValue, duration) {
+            let startValue = 0;
+            let increment = endValue / (duration / 10);
+            let current = startValue;
+            let element = document.getElementById(elementId);
+
+            let timer = setInterval(() => {
+                current += increment;
+                if (current >= endValue) {
+                    clearInterval(timer);
+                    element.innerText = endValue.toLocaleString();
+                } else {
+                    element.innerText = Math.floor(current).toLocaleString();
+                }
+            }, 10);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            countUp('projectsCount', 14, 2000);
+            countUp('peopleHelped', 10000, 2000);
+            countUp('yearsActive', 18, 2000);
+        });
+
+        function showTab(tabName) {
+            document.getElementById('active').style.display = tabName === 'active' ? 'block' : 'none';
+            document.getElementById('past').style.display = tabName === 'past' ? 'block' : 'none';
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelector(`button[onclick="showTab('${tabName}')"]`).classList.add('active');
+        }
 
     nextButton.addEventListener('click', () => {
       currentIndex = (currentIndex + 1) % cards.length;
