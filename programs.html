@@ -418,6 +418,65 @@ nav ul li:hover .dropdown-menu {
         display: flex;
         align-items: center;
     }
+    
+/* 📱 Mobile Responsive (320px - 546px) */
+@media (max-width: 546px) {
+  .program-card {
+    flex-direction: column; 
+    text-align: center;
+    width: 100%;
+  }
+
+  .program-card img {
+    width: 100%;
+    height: auto; 
+  }
+
+  .program-content {
+    width: 100%; 
+    padding: 10px;
+  }
+
+  .donate-button {
+    width: 100%;
+  }
+}
+
+/* 📱 Extra Small Screens (320px - 375px) */
+@media (max-width: 375px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .program-card {
+    padding: 10px;
+  }
+
+  .program-content {
+    padding: 5px;
+  }
+}
+    @media (max-width: 546px) {
+  .program-card {
+    flex-direction: column; 
+    text-align: center;
+    width: 70%;
+  }
+
+  .program-card img {
+    width: 100%; 
+  }
+
+  .program-content {
+    width: 100%; 
+    padding: 10px 0;
+  }
+
+  .donate-button {
+    width: 100%;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -483,64 +542,64 @@ nav ul li:hover .dropdown-menu {
     </div>
   </div>
 
-<section id="programs-section" style="padding: 50px 10%; background-color: #fff;">
-  <h2 style="font-size: 2rem; margin-bottom: 30px;">Explore Our Programs</h2>
-  <div class="programs-container" style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); align-items: center;">
-    
-    <!-- Program Card 1 -->
-    <div class="program-card" style="display: flex; gap: 20px; align-items: center;">
-      <img src="https://i.ibb.co/HDG13xX1/3e98227e-9cce-4c5f-a947-db49f9d7b38d.jpg" alt="Hope" class="program-image" style="width: 250px; height: 150px; object-fit: cover; border-radius: 10px;">
-      <div class="program-content">
-        <h3 class="program-title">Hope</h3>
-        <p class="program-description">Hope is the light that sustains us during challenges, and at Women With Vision, we strive to spark hope in every life we touch.</p>
-        <div class="program-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
-          <button class="donate-button" style="background-color: black; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">DONATE</button>
-          <button class="pledge-button" style="background-color: #ddd; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Monthly Pledge</button>
+  <section id="programs-section" style="padding: 50px 10%; background-color: #fff;">
+    <h2 style="font-size: 2rem; margin-bottom: 30px; text-align: center;">Explore Our Programs</h2>
+    <div class="programs-container" style="display: grid; gap: 20px; row-gap: 40px; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); align-items: center;">
+      
+      <!-- Program Card 1 -->
+      <div class="program-card" style="display: flex; gap: 20px; align-items: center;">
+        <img src="https://i.ibb.co/HDG13xX1/3e98227e-9cce-4c5f-a947-db49f9d7b38d.jpg" alt="Hope" class="program-image" style="width: 250px; height: 180px; object-fit: cover; border-radius: 10px;">
+        <div class="program-content" style="text-align: left;">
+          <h3 class="program-title">Hope</h3>
+          <p class="program-description">Hope is the light that sustains us during challenges, and at Women With Vision, we strive to spark hope in every life we touch.</p>
+          <div class="program-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
+            <button class="donate-button" style="background-color: black; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">DONATE</button>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Program Card 2 -->
-    <div class="program-card" style="display: flex; gap: 20px; align-items: center;">
-      <img src="https://i.ibb.co/hRq4QnV2/IMG-3246.jpg" alt="Wellness" class="program-image" style="width: 250px; height: 150px; object-fit: cover; border-radius: 10px;">
-      <div class="program-content">
-        <h3 class="program-title">Wellness</h3>
-        <p class="program-description">Health and wellness are essential for children to thrive. Our wellness programs focus on providing access to healthcare, hygiene resources, and mental health support.</p>
-        <div class="program-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
-          <button class="donate-button" style="background-color: black; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">DONATE</button>
-          <button class="pledge-button" style="background-color: #ddd; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Monthly Pledge</button>
+  
+      <!-- Program Card 2 -->
+      <div class="program-card" style="display: flex; gap: 20px; align-items: center;">
+        <img src="https://i.ibb.co/hRq4QnV2/IMG-3246.jpg" alt="Wellness" class="program-image" style="width: 250px; height: 180px; object-fit: cover; border-radius: 10px;">
+        <div class="program-content" style="text-align: left;">
+          <h3 class="program-title">Wellness</h3>
+          <p class="program-description">Our wellness programs focus on providing access to healthcare, hygiene resources, and mental health support.</p>
+          <div class="program-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
+            <button class="donate-button" style="background-color: black; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">DONATE</button>
+          </div>
         </div>
       </div>
-    </div>
-
-  </div><br>
-    <!-- Category Card 3 -->
-    <div class="program-card" style="display: flex; gap: 20px; align-items: center;">
-        <img src="https://i.ibb.co/HTKsDhTx/ae40a6f0-62f5-4508-9587-04c9b7bb628a.jpg" alt="Nourishment"  class="program-image" style="width: 250px; height: 150px; object-fit: cover; border-radius: 10px;">
-      <div class="program-content">
-        <h3 class="program-title">Education</h3>
-        <p class="program-description">Education is the key to breaiking the cycle of poverty.</p>
-        <div class="program-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
-          <button class="donate-button" style="background-color: black; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">DONATE</button>
-          <button class="pledge-button" style="background-color: #ddd; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Monthly Pledge</button>
+  
+      <!-- Program Card 3 -->
+      <div class="program-card" style="display: flex; gap: 20px; align-items: center;">
+        <img src="https://i.ibb.co/qLDHtNff/IMG-3941.jpg" alt="Education" class="program-image" style="width: 250px; height: 180px; object-fit: cover; border-radius: 10px;">
+        <div class="program-content" style="text-align: left;">
+          <h3 class="program-title">Education</h3>
+          <p class="program-description">Education is key to breaking the cycle of poverty.</p>
+          <div class="program-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
+            <button class="donate-button" style="background-color: black; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">DONATE</button>
+          </div>
         </div>
-    </div> 
-    <br>
-        <!-- Category Card 4 -->
-    <div class="category-card" style="display: flex; gap: 20px; align-items: center;">
-      <img src="https://i.ibb.co/qLDHtNff/IMG-3941.jpg" alt="Education"  class="program-image" style="width: 250px; height: 150px; object-fit: cover; border-radius: 10px;">
-      <div class="program-content">
-        <h3 class="program-title">Education</h3>
-        <p class="program-description">Education is the key to breaiking the cycle of poverty.</p>
-        <div class="program-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
-          <button class="donate-button" style="background-color: black; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">DONATE</button>
-          <button class="pledge-button" style="background-color: #ddd; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">Monthly Pledge</button>
+      </div>
+  
+      <!-- Program Card 4 -->
+      <div class="program-card" style="display: flex; gap: 20px; align-items: center;">
+        <img src="https://i.ibb.co/HTKsDhTx/ae40a6f0-62f5-4508-9587-04c9b7bb628a.jpg" alt="Nourishment" class="program-image" style="width: 250px; height: 180px; object-fit: cover; border-radius: 10px;">
+        <div class="program-content" style="text-align: left;">
+          <h3 class="program-title">Nourishment</h3>
+          <p class="program-description">No child should have to choose between hunger and.</p>
+          <div class="program-buttons" style="display: flex; gap: 10px; margin-top: 10px;">
+            <button class="donate-button" style="background-color: black; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">DONATE</button>
+          </div>
         </div>
+      </div>
+  
     </div>
-  </div>
   </section>
+  
+  
 
-
+  
 
 <!-- CTA Section -->
 <section id="cta" style="padding: 40px 10%; background-color: #5e72a9; color: white;">
