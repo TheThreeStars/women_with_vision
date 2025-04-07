@@ -715,6 +715,55 @@ nav ul li:hover .dropdown-menu {
         display: flex;
         align-items: center;
     }
+    .sponsor-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.sponsor-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.sponsor-grid img {
+  width: 100%;
+  height: 200px; /* Fixed height for all grid blocks */
+  object-fit: contain; /* Ensures images fit inside without distortion */
+  border: 2px solid #2c2c54;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #2c2c54;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .sponsor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .sponsor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -857,6 +906,26 @@ nav ul li:hover .dropdown-menu {
     </div>
   </section>
 
+  <section class="sponsor-section">
+    <h2>Our Sponsors</h2>
+    <div class="sponsor-grid">
+      <img src="./images/hotel savoy.png" alt="Sponsor 1">
+      <img src="./images/panarottis.png" alt="Sponsor 2">
+      <img src="./images/spur.jpg" alt="Sponsor 3">
+      <img src="./images/electrical.png" alt="Sponsor 4">
+      <img src="./images/meyers.png" alt="Sponsor 5">
+      <img src="./images/john dorys.jpg" alt="Sponsor 6">
+      <img src="./images/mayfair.png" alt="Sponsor 7">
+      <img src="./images/model.jpg" alt="Sponsor 8">
+      <img src= "./images/bk.png" alt="Sponsor 9">
+      <img src="sponsor6.png" alt="Sponsor 10">
+      <img src="sponsor6.png" alt="Sponsor 11">
+      <img src="sponsor6.png" alt="Sponsor 12">
+      <img src="./images/rons.jpg" alt="Sponsor 13">
+      <img src="./images/langeni.jpg" alt="Sponsor 14">
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
     <div class="footer-container">
@@ -904,7 +973,7 @@ nav ul li:hover .dropdown-menu {
 </footer>  
 
   <script>
-    // Function to toggle side navbar
+    // Function to toggle side nav
     function toggleNav() {
       var sideNav = document.getElementById('side-nav');
       sideNav.classList.toggle('open');
