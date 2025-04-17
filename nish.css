@@ -653,6 +653,8 @@ opacity: 0.9;
 /*General Styling*/
 .active-missions{
   padding: 80px 80px;
+  background-color: #ffffff;
+  color: #2c2c54;
 }
 
 
