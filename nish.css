@@ -381,89 +381,72 @@ nav ul li:hover .dropdown-menu {
     }
   }
 
-  /* Hero Section */
-  .hero {
-    position: relative;
-    height: 83vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    /* padding: 20px; */
-  }
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 83vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
 
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://i.ibb.co/ZpjRvV5d/IMG-2311.jpg') no-repeat center center/cover;
-    filter: blur(3px);
-    z-index: -2;
-  }
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.ibb.co/7J31QVfD/bgimghome.jpg");
+  background-size: cover ;
+  background-position: center;
+  filter: blur(3px);
+  z-index: -2;
+}
 
-  .hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-  }
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* for dark overlay */
+  z-index: -1;
+}
 
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    padding: 35px;
-  }
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 35px;
+}
 
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
 
-  .hero p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
 
-  /* .hero button {
-    background-color: #5e72a9;
-    color: white;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
+.hero a {
+  text-decoration: none;
+  background-color: #2c2c54;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-  .hero button:hover {
-    background-color: #2c2c54;
-  } */
-
-  .hero a{
-    text-decoration: none;
-    background-color: #2c2c54;
-    color: white;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border: none;
-    /* border-radius: 5px; */
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  .hero a:hover {
-    background-color: #2c2c54;
-  }
+.hero a:hover {
+  background-color: #5e72a9;
+}
 
   .missions-section-title {
     text-align: center;
