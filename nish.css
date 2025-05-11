@@ -381,29 +381,20 @@ nav ul li:hover .dropdown-menu {
     }
   }
 
-/* Hero Section */
+/* Hero Section */ 
 .hero {
   position: relative;
   height: 83vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  overflow: hidden;
-}
-
-.bg-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: url("https://i.ibb.co/7J31QVfD/bgimghome.jpg");
-  background-size: cover ;
+  background-size: cover;
   background-position: center;
-  filter: blur(3px);
-  z-index: -2;
+  overflow: hidden;
 }
 
 .hero::after {
@@ -414,8 +405,15 @@ nav ul li:hover .dropdown-menu {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* for dark overlay */
-  z-index: -1;
+  z-index: 0;
 }
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
+}
+
 
 .hero-content {
   position: relative;
