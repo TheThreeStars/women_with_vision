@@ -125,30 +125,39 @@
     </div>
 </section>
 
-  <!-- Impact Section -->
-  <section class="impact">
-    <h2 class="section-title">Our Impact</h2>
-    <div class="impact-cards">
-      <!-- Testimonial 1 -->
-      <div class="impact-card">
-        <h3 class="Tammy">Tammy Thompson</h3>
-        <p class="p10"><strong>House Mother</strong></p>
-        <p class="p11">‘Our kids felt the magic of Christmas for the first time, thanks to WWV.’</p>
-      </div>
-      <!-- Testimonial 2 -->
-      <div class="impact-card">
-        <h3 class="Nancy">Nancy Noodle</h3>
-        <p class="p12"><strong>Local Nurse</strong></p>
-        <p class="p13">‘We are truly grateful to the WWV team for the life-changing pap smear campaign they run for the women in our area.’</p>
-      </div>
-      <!-- Testimonial 3 -->
-      <div class="impact-card">
-        <h3 class="Penny">Penny Poker</h3>
-        <p class="p14"><strong>Local Teacher</strong></p>
-        <p class="p15">‘The Polar Park playground has positively impacted the lives of so many of our young ones!’</p>
+<!-- Impact Section -->
+<section class="impact">
+  <h2 class="section-title">Our Impact</h2>
+  
+  <div class="carousel-container">
+    <button class="carousel-btn prev">&#10094;</button>
+
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track">
+        <div class="impact-card">
+          <h3>Tammy Thompson</h3>
+          <p><strong>House Mother</strong></p>
+          <p>"Our kids felt the magic of Christmas for the first time, thanks to WWV."</p>
+        </div>
+        <div class="impact-card">
+          <h3>Nancy Noodle</h3>
+          <p><strong>Local Nurse</strong></p>
+          <p>"We are truly grateful to the WWV team for the life-changing pap smear campaign."</p>
+        </div>
+        <div class="impact-card">
+          <h3>Penny Poker</h3>
+          <p><strong>Local Teacher</strong></p>
+          <p>"The Polar Park playground has positively impacted so many young lives!"</p>
+        </div>
       </div>
     </div>
-  </section>
+
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</section>
+
+
+  
 
   <section class="sponsor-section">
     <h2 class="sponsor-section-title">Our Sponsors</h2>
@@ -215,7 +224,6 @@
       <p class="p16">Developed & designed  by The Three Stars Digital Solutions Agency &copy; 2025</p>
     </div>
 </footer>  
-
   <script>
     // Function to toggle side nav
     function toggleNav() {
@@ -223,15 +231,15 @@
       sideNav.classList.toggle('open');
     }
 
-    nextButton.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % cards.length;
-      track.style.transform = `translateX(-${currentIndex * 320}px)`;
-    });
+    // nextButton.addEventListener('click', () => {
+    //   currentIndex = (currentIndex + 1) % cards.length;
+    //   track.style.transform = `translateX(-${currentIndex * 320}px)`;
+    // });
 
-    prevButton.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      track.style.transform = `translateX(-${currentIndex * 320}px)`;
-    });
+    // prevButton.addEventListener('click', () => {
+    //   currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    //   track.style.transform = `translateX(-${currentIndex * 320}px)`;
+    // });
 
     function toggleContent() {
       const content = document.querySelector('.expand-content');
@@ -244,6 +252,54 @@
         button.innerText = "Read More";
       }
     }
+      // reviews carousel
+       document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const cards = Array.from(document.querySelectorAll('.impact-card'));
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+
+    let currentIndex = 0;
+
+    function updateSlide() {
+      const slideWidth = cards[0].offsetWidth + 32; // adjust if your card margin isn't 32px
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    function goToNext() {
+      currentIndex = (currentIndex + 1) % cards.length; // loop back to start
+      updateSlide();
+    }
+
+    function goToPrev() {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length; // loop back to end
+      updateSlide();
+    }
+
+    nextButton.addEventListener('click', () => {
+      clearInterval(autoSlide); 
+      goToNext();
+      restartAutoSlide();
+    });
+
+    prevButton.addEventListener('click', () => {
+      clearInterval(autoSlide);
+      goToPrev();
+      restartAutoSlide();
+    });
+
+    window.addEventListener('resize', updateSlide);
+
+    // Start auto slide
+    let autoSlide = setInterval(goToNext, 3000); // every 3 seconds
+
+    function restartAutoSlide() {
+      autoSlide = setInterval(goToNext, 3000);
+    }
+
+    updateSlide(); // initial position
+  });
   </script>
 </body>
 </html>
+
