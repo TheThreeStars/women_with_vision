@@ -567,6 +567,7 @@ nav ul li:hover .dropdown-menu {
       font-weight: 700;
     color: #fff;
   }
+  
 @media (max-width: 375px) {
   .intro-text {
     padding: 60px 15px 80px;  /* Top & bottom padding added */

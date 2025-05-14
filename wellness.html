@@ -208,16 +208,16 @@ nav ul li:hover .dropdown-menu {
     }
 
     /* Hero Section */
-    .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 74vh;
-        padding: 50px 10%;
-        background: #2c2c54;
-        color: white;
-        margin-bottom: 50px;
-    }
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 10%;
+    background: #2c2c54;
+    color: white;
+    padding: 50px 10% 50px 10%;
+}
 
     .hero-text {
         max-width: 60%;
@@ -239,7 +239,8 @@ nav ul li:hover .dropdown-menu {
     }
 
     .cta-button {
-      background-color: white !important; /* Change background to white */
+    margin-bottom: 20px; /* space btwn btn and img*/
+    background-color: white !important; /* Change background to white */
     color: #2c2c54 !important; /* Adjust text color to match the design */
     padding: 10px 15px; 
     border: none; 
@@ -338,6 +339,9 @@ nav ul li:hover .dropdown-menu {
   }
 
   @media (max-width: 768px) {
+    .key-initiatives{
+      padding: 40px 20px;
+    }
     .initiatives-container {
       flex-direction: column;
       align-items: center;
@@ -523,7 +527,6 @@ nav ul li:hover .dropdown-menu {
   </div>
 </section>
 
-<!-- Content Section -->
 <!-- Content Section -->
 <section class="key-initiatives">
   <div class="content">
