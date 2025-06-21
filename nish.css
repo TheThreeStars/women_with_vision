@@ -455,7 +455,7 @@ nav ul li:hover .dropdown-menu {
   justify-content: center;
   text-align: center;
   color: white;
-  background-image: url("https://i.ibb.co/4RFvmZHh/PHOTO-2025-06-20-17-11-22.jpg");
+  background-image: url("https://i.ibb.co/4RFvmZHh/PHOTO-2025-06-20-17-11-22.jpg" );
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -692,53 +692,30 @@ nav ul li:hover .dropdown-menu {
     color: #777;
   }
 
-  .missions {
+  .active-missions {
+    padding: 10px 40px;
+    background-color: #ffffff;
+    color: #2c2c54;
+    padding-bottom: 40px;
     text-align: center;
-    padding: 2rem;
   }
   
-  .missions-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
+  .missions-section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
   }
   
-  .mission {
-    max-width: 250px;
-  }
-  
-  .mission img {
-    width: 100%;
-    border-radius: 0px;
-  }
-  
-  .mission h4 {
-    /* margin: 0.5rem 0; */
-    font-size: 1.1rem;
-    color: #444;
-  }
-  
-  .mission a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    text-decoration: none;
-    color: #007BFF;
-  }
-  
-
   .mission-cards {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 40px;
-    padding: 0 10px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
   
   .mission-card {
     position: relative;
-    width: 30%;
+    width: 100%;
+    max-width: 350px;
     height: 350px;
     background-size: cover;
     background-position: center;
@@ -748,7 +725,6 @@ nav ul li:hover .dropdown-menu {
     align-items: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    margin-bottom: 20px;
   }
   
   .mission-card:hover {
@@ -789,66 +765,78 @@ nav ul li:hover .dropdown-menu {
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.5px;
-    text-align: center;
     opacity: 0.9;
+    line-height: 1.5;
   }
-
-/* Tablets & below (<=768px) */
-@media (max-width: 768px) {
-  .mission-cards {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
+  
+  /* Responsive Styling */
+  
+  /* Tablets & Below */
+  @media (max-width: 1024px) {
+    .missions-section-title {
+      font-size: 2rem;
+    }
+  
+    .mission-card {
+      height: 320px;
+    }
   }
-
-  .mission-card {
-    width: 100%;
-    height: 300px;
+  
+  /* Mobile Devices */
+  @media (max-width: 768px) {
+    .mission-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mission-card {
+      width: 100%;
+      max-width: 90%;
+      height: 300px;
+    }
+  
+    .mission-card h3,
+    .mthatha {
+      font-size: 1.3rem;
+    }
+  
+    .mission-card p {
+      font-size: 0.95rem;
+    }
   }
-
-  .mission-card h3,
-  .mthatha {
-    font-size: 1.4rem;
+  
+  /* Small Phones */
+  @media (max-width: 480px) {
+    .active-missions {
+      padding: 10px 20px;
+    }
+  
+    .mission-card {
+      max-width: 100%;
+      height: 260px;
+    }
+  
+    .mission-card h3,
+    .mthatha {
+      font-size: 1.1rem;
+    }
+  
+    .mission-card p {
+      font-size: 0.9rem;
+    }
   }
-
-  .mission-card p {
-    font-size: 0.95rem;
+  
+  /* Tiny screens (320px) */
+  @media (max-width: 360px) {
+    .mission-card {
+      height: 230px;
+    }
+  
+    .mission-card p {
+      font-size: 0.85rem;
+    }
   }
-}
-
-/* Small phones (<=480px) */
-@media (max-width: 480px) {
-  .mission-cards {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem;
-  }
-
-  .mission-card {
-    width: 110%;       
-    height: 255px;     
-    margin-bottom: 20px;
-    margin-right: 10rem;  }
-
-  .mission-card h3,
-  .mthatha {
-    font-size: 1.2rem;
-  }
-
-  .mission-card p {
-    font-size: 0.9rem;
-  }
-}
-
-
-
-/*General Styling*/
-.active-missions{
-  padding: 10px 80px;;
-  background-color: #ffffff;
-  color: #2c2c54;
-  padding-bottom: 40px;
-}
+  
 
 
   /* General Section Styling */

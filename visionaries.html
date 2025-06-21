@@ -173,80 +173,69 @@ nav ul li:hover .dropdown-menu {
         color: white;
     }
 
-    @media (max-width: 768px) {
-      /* Hide default navigation */
-      nav ul {
-        display: none;
-      }
-
-      header {
-    display: flex;
-    justify-content: space-between; /* Ensures space between the logo and hamburger */
-    align-items: center; /* Vertically aligns them */
-    padding: 20px;
-  }
-
-  .hamburger {
-    display: block; /* Make sure the hamburger icon is visible */
-    font-size: 30px;
-    cursor: pointer;
-  }
-
-      /* Hide breadcrumb on mobile */
-      .breadcrumb {
-        display: none;
-      }
-
-      /* Side nav appearance */
-      .side-nav {
-        width: 0;
-      }
-
-      .side-nav.open {
-        width: 100%;
-      }
-    }
-
     .who-we-are {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 40px 0;
+  color: white;
+  background-image: url("https://i.ibb.co/HTYq9y6Q/IMG-1430.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  overflow: hidden;
 }
 
-.who-we-are img {
+.who-we-are::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 0;
+}
+
+.who-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 35px 20px;
+}
+
+.who-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.who-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color: #fff;
+}
+
+.who-content img {
   width: 100%;
   max-width: 700px;
-  height: 400px;
-  margin: 20px auto;
-  display: block;
+  height: auto;
+  margin-top: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.who-we-are h2 {
-  font-size: 48px;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.who-we-are p {
-  max-width: 700px;
-  margin: 0 auto 20px auto;
-  font-size: 1rem;
-  color: #fff;
-  line-height: 1.8;
-}
-
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .who-we-are {
-    padding: 0 15px;  /* Adjust padding on smaller screens */
+  .who-content h2 {
+    font-size: 2rem;
   }
 
-  .who-we-are h2 {
-    font-size: 2rem;  /* Adjust heading size for smaller screens */
-  }
-
-  .who-we-are p {
-    font-size: 1rem;  /* Adjust paragraph size for smaller screens */
+  .who-content p {
+    font-size: 1rem;
   }
 }
 
@@ -264,12 +253,13 @@ nav ul li:hover .dropdown-menu {
   text-align: center;
 }
 
-.board-members, .exco-committee {
+.board-members,
+.exco-committee {
   display: flex;
-  justify-content: space-between;  /* Align cards in a row */
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   margin-bottom: 40px;
-  flex-wrap: wrap;
 }
 
 .card {
@@ -278,7 +268,9 @@ nav ul li:hover .dropdown-menu {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
   text-align: center;
-  width: 18%;  /* Adjust card width for a neat row layout */
+  width: calc(33.333% - 20px); /* 3 cards per row with gap */
+  max-width: 300px;
+  flex-grow: 1;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -307,27 +299,31 @@ nav ul li:hover .dropdown-menu {
   color: #666;
 }
 
-.card h3, .card p {
+.card h3,
+.card p {
   transition: color 0.2s ease;
 }
 
-.card:hover h3, .card:hover p {
+.card:hover h3,
+.card:hover p {
   color: #4e8ccf;
 }
 
-@media (max-width: 768px) {
-  .board-members, .exco-committee {
-    flex-direction: column;  /* Change flex direction to column on small screens */
-    align-items: center;  /* Center the cards */
-    gap: 20px;
-  }
-
+/* Tablet screens: 2 cards per row */
+@media (max-width: 1024px) {
   .card {
-    width: 80%;  /* Make cards wider on smaller screens */
+    width: calc(50% - 20px);
+  }
+}
+
+/* Mobile screens: 1 card per row */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
   }
 
   .visionaries-section h2 {
-    font-size: 2rem;  /* Adjust heading size for smaller screens */
+    font-size: 2rem;
   }
 }
 
@@ -492,11 +488,15 @@ footer {
   </div>
 
   <section class="who-we-are">
-    <h2>Who We Are</h2>
-    <p class="p1">Founded in 2008 in Mthatha, Women With Vision (WWV) is a nonprofit dedicated to breaking cycles of poverty and creating opportunities for children and families.</p>
-    <p class="p1">Our story began with nine women and a dream: to make a difference in their communities. Today, our network has grown to 80 women, united by compassion, tenacity, and a commitment to building a brighter future for South Africa's most vulnerable.</p>
-    <img src="https://i.ibb.co/HTYq9y6Q/IMG-1430.jpg" alt="Women With Vision Community Image">
+    <div class="who-bg"></div>
+    <div class="who-content">
+      <h2>Who We Are</h2>
+      <p>Founded in 2008 in Mthatha, Women With Vision (WWV) is a nonprofit dedicated to breaking cycles of poverty and creating opportunities for children and families.</p>
+      <p>Our story began with nine women and a dream: to make a difference in their communities. Today, our network has grown to 80 women, united by compassion, tenacity, and a commitment to building a brighter future for South Africa's most vulnerable.</p>
+      
+    </div>
   </section>
+  
   
   <section class="visionaries-section">
     <h2>Board Members </h2>

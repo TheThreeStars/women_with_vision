@@ -207,36 +207,76 @@ nav ul li:hover .dropdown-menu {
       }
     }
 
-    /* Hero Section */
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 110vh;
-    padding: 0 10%;
-    background: #2c2c54;
-    color: white;
-    padding: 50px 10% 50px 10%;
+  /* Education Hero Section */
+.education-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-image: url("https://i.ibb.co/JwmCCJ69/IMG-6848.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  overflow: hidden;
 }
 
-    .hero-text {
-        max-width: 60%;
-    }
+.education-hero .hero-overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 0;
+}
 
-    .hero-text h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
+.education-hero .hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 35px 20px;
+}
 
-    .hero-text p {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
+.education-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
 
-    .hero-image img {
-      width: 400px;
-      height: 300px;
-    }
+.education-hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.education-hero .cta-button {
+  text-decoration: none;
+  background-color: #2c2c54;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.education-hero .cta-button:hover {
+  background-color: #5e72a9;
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+  .education-hero h1 {
+    font-size: 2rem;
+  }
+
+  .education-hero p {
+    font-size: 1rem;
+  }
+}
 
     .cta-button {
     margin-bottom: 20px; /* space btwn btn and img*/
@@ -512,18 +552,15 @@ nav ul li:hover .dropdown-menu {
     </ul>
   </div>
 
-  <!-- Hero Section -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Education</h1>
-    <p class="p1">Equipping young minds with school essentials and opening doors to brighter futures through bursaries and support.</p>
-    <a href="/educationdonate.html" class="cta-button">Donate Here</a>
-  </div>
-  <div class="hero-image">
-    <img src="https://i.ibb.co/JwmCCJ69/IMG-6848.jpg" alt="Inspiring Image" />
-  </div>
-</section>
-
+  <section class="hero education-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Education</h1>
+      <p>Equipping young minds with school essentials and opening doors to brighter futures through bursaries and support.</p>
+      <a href="/educationdonate.html" class="cta-button">Donate Here</a>
+    </div>
+  </section>
+  
 <!-- Content Section -->
 <section class="key-initiatives">
   <div class="content">
