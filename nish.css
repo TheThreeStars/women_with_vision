@@ -391,7 +391,7 @@ nav ul li:hover .dropdown-menu {
   justify-content: center;
   text-align: center;
   color: white;
-  background-image: url("https://ibb.co/k2GbHgtN");
+  background-image: url("https://i.ibb.co/KTtXtgT/PHOTO-2025-06-20-17-16-43-1.jpg"  );
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -1226,9 +1226,10 @@ footer {
   padding: 2rem;
   background-color: #f9f9f9;
   text-align: center;
+  overflow: hidden;
 }
 
-.sponsor-section h2 {
+.sponsor-section-title {
   margin-bottom: 1.5rem;
   font-size: 2rem;
   padding: 1em 0;
@@ -1236,42 +1237,56 @@ footer {
   color: #2c2c54;
 }
 
-.sponsor-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1rem;
+.sponsor-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-.sponsor-grid img {
-  width: 100%;
-  max-width: 150px;
+.carousel-track1 {
+  display: flex;
+  gap: 20px;
+  animation: scroll 40s linear infinite;
+  width: max-content;
+}
+
+.carousel-track1 img {
+  width: 150px;
   height: 120px;
   object-fit: contain;
   border: 2px solid #2c2c54;
   padding: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 0 auto;
+  background-color: white;
 }
 
-.sponsor-grid img:hover {
+.carousel-track1 img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #2c2c54;
 }
 
-/* Tablet screens */
-@media (max-width: 768px) {
-  .sponsor-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-/* Mobile screens */
+/* Responsive Image Sizes */
+@media (max-width: 768px) {
+  .carousel-track1 img {
+    width: 120px;
+    height: 100px;
+  }
+}
+
 @media (max-width: 480px) {
-  .sponsor-grid {
-    grid-template-columns: 1fr;
+  .carousel-track1 img {
+    width: 100px;
+    height: 80px;
   }
 }
   /*END OF HOME PAGE CODE*/
