@@ -173,7 +173,36 @@
       <p class="p31">Design and Development by The Three Stars Digital Solutions Agency &copy; 2025</p>
     </div>
 </footer>  
+<style>
+  .hero {
+  position: relative;
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-image: url("https://i.ibb.co/4RFvmZHh/PHOTO-2025-06-20-17-11-22.jpg" );
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  padding: 20px;
+}
 
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+
+</style>
   <script>
     // Function to toggle side nav
     function toggleNav() {
